@@ -3,6 +3,7 @@
 #include "SGameInstance.h"
 #include "Engine/Engine.h"
 #include "UObject/ConstructorHelpers.h"
+#include "OnlineSubsystem.h"
 #include "Blueprint/UserWidget.h"
 #include "MenuSystem/WSUserWidget.h"
 #include "MenuSystem/SMenuWidget.h"
@@ -33,10 +34,24 @@ USGameInstance::USGameInstance(const FObjectInitializer & ObjectInitializer)
 
 void USGameInstance::Init()
 {
+	IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
+	if (Subsystem)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Found Subsystem %s"), *Subsystem->GetSubsystemName().ToString());
+		IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
+		if (SessionInterface.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Found Session Interface"));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Nothing Found"));
+	}
 	UE_LOG(LogTemp, Warning, TEXT("Found Class %s"), *MenuClass->GetName());
 }
 
-void USGameInstance::LoadMenu()
+void USGameInstance::LoadMenuWidget()
 {
 	if (!ensure(MenuClass != nullptr)) return;
 	Menu = CreateWidget<UWSUserWidget>(this, MenuClass);
