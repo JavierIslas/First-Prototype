@@ -1,9 +1,28 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "WSUserWidget.h"
+#include "Engine/Engine.h"
+#include "UObject/ConstructorHelpers.h"
 #include "Components/Button.h"
 #include "Components/WidgetSwitcher.h"
 #include "Components/EditableTextBox.h"
+#include "Components/TextBlock.h"
+#include "SServerRow.h"
+
+
+
+UWSUserWidget::UWSUserWidget(const FObjectInitializer & ObjectInitializer)
+{
+	ConstructorHelpers::FClassFinder<UUserWidget> ServerRowBPClass(TEXT("/Game/MenuSystem/ServerRow_WBP"));
+	if (ensure(ServerRowBPClass.Class))
+	{
+		ServerRowClass = ServerRowBPClass.Class;
+	}
+	else
+	{
+		return;
+	}
+}
 
 bool UWSUserWidget::Initialize()
 {
@@ -42,6 +61,10 @@ void UWSUserWidget::OpenJoinMenu()
 	if (!ensure(MenuSwitcher)) return;
 	if (!ensure(JoinMenu)) return;
 	MenuSwitcher->SetActiveWidget(JoinMenu);
+	if (MI)
+	{
+		MI->ServerListRefresh();
+	}
 }
 
 void UWSUserWidget::OpenMainMenu()
@@ -51,14 +74,29 @@ void UWSUserWidget::OpenMainMenu()
 	MenuSwitcher->SetActiveWidget(MainMenu);
 }
 
+void UWSUserWidget::SetServerList(TArray<FString> ServerNames)
+{
+
+	UWorld* World = this->GetWorld();
+	if (!ensure(World)) return;
+
+	ServerList->ClearChildren();
+
+	for (const FString& ServerName : ServerNames)
+	{
+		USServerRow* Row = CreateWidget<USServerRow>(World, ServerRowClass);
+
+		if (!ensure(Row != nullptr)) return;
+		Row->ServerName->SetText(FText::FromString(ServerName));
+		ServerList->AddChild(Row);
+	}	
+}
+
 void UWSUserWidget::ConectToGame()
 {
 	if (MI)
 	{
-		if (!ensure(InputAddres)) return;
-		const FString Addres = InputAddres->GetText().ToString();
-		MI->Join(Addres);
-		UE_LOG(LogTemp, Warning, TEXT("Joining Server %s"), *Addres);
+		MI->Join("-");
 	}
 }
 

@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "OnlineSessionInterface.h"
 #include "MenuSystem/SMainMenuInterface.h"
 #include "SGameInstance.generated.h"
 
-class USMenuWidget;
+class UWSUserWidget;
+class FOnlineSessionSearch;
 
 /**
  * 
@@ -36,7 +38,9 @@ public:
 	UFUNCTION(Exec)
 	void Join(const FString& IPAddres) override;
 
-	virtual void LoadMainMenu() override;
+	void LoadMainMenu() override;
+
+	void ServerListRefresh() override;
 
 private:
 
@@ -44,7 +48,17 @@ private:
 
 	TSubclassOf<class UUserWidget> InGameMenuClass;
 
-	USMenuWidget* Menu;
+	UWSUserWidget* Menu;
 
+	IOnlineSessionPtr SessionInterface;
 
+	TSharedPtr<FOnlineSessionSearch> SessionSearch;
+
+	void OnCreateSessionComplete(FName SessionName, bool Success);
+
+	void OnDestroySessionComplete(FName SessionName, bool Success);
+
+	void CreateSession();
+
+	void OnFindSessionComplete(bool Success);
 };

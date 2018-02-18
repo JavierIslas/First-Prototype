@@ -4,9 +4,12 @@
 #include "Engine/Engine.h"
 #include "UObject/ConstructorHelpers.h"
 #include "OnlineSubsystem.h"
+#include "OnlineSessionSettings.h"
 #include "Blueprint/UserWidget.h"
 #include "MenuSystem/WSUserWidget.h"
 #include "MenuSystem/SMenuWidget.h"
+
+const static FName SESSION_NAME = TEXT("SessionGame");
 
 USGameInstance::USGameInstance(const FObjectInitializer & ObjectInitializer)
 {
@@ -38,10 +41,12 @@ void USGameInstance::Init()
 	if (Subsystem)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Found Subsystem %s"), *Subsystem->GetSubsystemName().ToString());
-		IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
+		SessionInterface = Subsystem->GetSessionInterface();
 		if (SessionInterface.IsValid())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Found Session Interface"));
+			SessionInterface->OnCreateSessionCompleteDelegates.AddUObject(this, &USGameInstance::OnCreateSessionComplete);
+			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &USGameInstance::OnDestroySessionComplete);
+			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &USGameInstance::OnFindSessionComplete);
 		}
 	}
 	else
@@ -65,7 +70,7 @@ void USGameInstance::LoadMenuWidget()
 void USGameInstance::InGameLoadMenu()
 {
 	if (!ensure(MenuClass != nullptr)) return;
-	Menu = CreateWidget<USMenuWidget>(this, InGameMenuClass);
+	USMenuWidget* Menu = CreateWidget<USMenuWidget>(this, InGameMenuClass);
 
 	if (!ensure(Menu != nullptr)) return;
 
@@ -73,8 +78,61 @@ void USGameInstance::InGameLoadMenu()
 	Menu->SetMainMenuInterface(this);
 }
 
-void USGameInstance::Host()
+void USGameInstance::OnDestroySessionComplete(FName SessionName, bool Success)
 {
+	if (Success)
+	{
+		CreateSession();
+	}
+}
+
+void USGameInstance::CreateSession()
+{
+	if (SessionInterface.IsValid())
+	{
+		FOnlineSessionSettings SessionSetting;
+		SessionSetting.bIsLANMatch = true;
+		SessionSetting.NumPublicConnections = 4;
+		SessionSetting.bShouldAdvertise = true;
+		SessionInterface->CreateSession(0, SESSION_NAME, SessionSetting);
+	}
+}
+
+void USGameInstance::OnFindSessionComplete(bool Success)
+{
+	if (Success && SessionSearch.IsValid() && Menu)
+	{
+		TArray<FString> ServerNames;
+		UE_LOG(LogTemp, Warning, TEXT("Finishing Find Sessions"));
+		for (FOnlineSessionSearchResult& SearchResult : SessionSearch->SearchResults)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Find %s Session"), *SearchResult.GetSessionIdStr());
+			ServerNames.Add(SearchResult.GetSessionIdStr());
+		}
+		Menu->SetServerList(ServerNames);
+	}
+
+}
+
+void USGameInstance::ServerListRefresh()
+{
+	SessionSearch = MakeShareable(new FOnlineSessionSearch());
+	if (SessionSearch.IsValid())
+	{
+		SessionSearch->bIsLanQuery = true;
+		//SessionSearch->QuerySettings.Set(); //for Stea
+		UE_LOG(LogTemp, Warning, TEXT("Starting to Find Sessions"));
+		SessionInterface->FindSessions(0, SessionSearch.ToSharedRef());
+	}
+}
+
+void USGameInstance::OnCreateSessionComplete(FName SessionName, bool Success)
+{
+	if (!Success)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Could not create Session"));
+		return;
+	}
 	if (Menu)
 	{
 		Menu->Teardown();
@@ -106,10 +164,10 @@ void USGameInstance::Join(const FString& IPAddres)
 {
 	if (Menu)
 	{
-		Menu->Teardown();
+		Menu->SetServerList({"Test1", "Text2"});
 	}
 
-	UEngine* Engine = GetEngine();
+	/*UEngine* Engine = GetEngine();
 	if (ensure(Engine))
 	{
 		Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %S"), *IPAddres));
@@ -127,7 +185,7 @@ void USGameInstance::Join(const FString& IPAddres)
 	else
 	{
 		return;
-	}
+	}*/
 }
 
 void USGameInstance::LoadMainMenu()
@@ -142,3 +200,21 @@ void USGameInstance::LoadMainMenu()
 		return;
 	}
 }
+
+void USGameInstance::Host()
+{
+	if (SessionInterface.IsValid())
+	{
+		auto ExistingSession = SessionInterface->GetNamedSession(SESSION_NAME);
+		if (ExistingSession != nullptr)
+		{
+			SessionInterface->DestroySession(SESSION_NAME);
+		}
+		else
+		{
+			CreateSession();
+		}
+
+	}
+}
+

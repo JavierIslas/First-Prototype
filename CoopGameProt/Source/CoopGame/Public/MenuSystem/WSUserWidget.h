@@ -9,6 +9,7 @@
 
 class UButton;
 class UWidget;
+class UPanelWidget;
 class UWidgetSwitcher;
 class UEditableTextBox;
 /**
@@ -65,6 +66,13 @@ private:
 	UWidget* JoinMenu;
 
 	UPROPERTY(meta = (BindWidget))
-	UEditableTextBox* InputAddres;
+	UPanelWidget* ServerList;
 
+	TSubclassOf<class UUserWidget> ServerRowClass;
+
+public:
+
+	UWSUserWidget(const FObjectInitializer & ObjectInitializer);
+
+	void SetServerList(TArray<FString> ServerNames);
 };
