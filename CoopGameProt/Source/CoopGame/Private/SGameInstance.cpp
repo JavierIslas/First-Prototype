@@ -47,6 +47,7 @@ void USGameInstance::Init()
 			SessionInterface->OnCreateSessionCompleteDelegates.AddUObject(this, &USGameInstance::OnCreateSessionComplete);
 			SessionInterface->OnDestroySessionCompleteDelegates.AddUObject(this, &USGameInstance::OnDestroySessionComplete);
 			SessionInterface->OnFindSessionsCompleteDelegates.AddUObject(this, &USGameInstance::OnFindSessionComplete);
+			SessionInterface->OnJoinSessionCompleteDelegates.AddUObject(this, &USGameInstance::OnJoinSessionComplete);
 		}
 	}
 	else
@@ -91,9 +92,10 @@ void USGameInstance::CreateSession()
 	if (SessionInterface.IsValid())
 	{
 		FOnlineSessionSettings SessionSetting;
-		SessionSetting.bIsLANMatch = true;
+		SessionSetting.bIsLANMatch = false;
 		SessionSetting.NumPublicConnections = 4;
 		SessionSetting.bShouldAdvertise = true;
+		SessionSetting.bUsesPresence = true;
 		SessionInterface->CreateSession(0, SESSION_NAME, SessionSetting);
 	}
 }
@@ -114,13 +116,44 @@ void USGameInstance::OnFindSessionComplete(bool Success)
 
 }
 
+void USGameInstance::OnJoinSessionComplete(FName Session, EOnJoinSessionCompleteResult::Type)
+{
+	if (!SessionInterface.IsValid()) return;
+
+	FString Address;
+	if (!SessionInterface->GetResolvedConnectString(Session, Address))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Could not get Connect String"));
+	}
+	UEngine* Engine = GetEngine();
+	if (ensure(Engine))
+	{
+		Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %S"), *Address));
+	}
+	else
+	{
+		return;
+	}
+
+	APlayerController* PC = GetFirstLocalPlayerController();
+	if (ensure(PC))
+	{
+		PC->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+	}
+	else
+	{
+		return;
+	}
+}
+
 void USGameInstance::ServerListRefresh()
 {
 	SessionSearch = MakeShareable(new FOnlineSessionSearch());
 	if (SessionSearch.IsValid())
 	{
-		SessionSearch->bIsLanQuery = true;
-		//SessionSearch->QuerySettings.Set(); //for Stea
+		//SessionSearch->bIsLanQuery = true;
+		SessionSearch->MaxSearchResults = 99;
+		SessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals); // For Steam
 		UE_LOG(LogTemp, Warning, TEXT("Starting to Find Sessions"));
 		SessionInterface->FindSessions(0, SessionSearch.ToSharedRef());
 	}
@@ -160,32 +193,20 @@ void USGameInstance::OnCreateSessionComplete(FName SessionName, bool Success)
 
 }
 
-void USGameInstance::Join(const FString& IPAddres)
+void USGameInstance::Join(uint32 Index)
 {
+	if (!SessionInterface.IsValid()) return;
+
+	if (!SessionSearch.IsValid()) return;
+
 	if (Menu)
 	{
-		Menu->SetServerList({"Test1", "Text2"});
+		Menu->Teardown();
 	}
 
-	/*UEngine* Engine = GetEngine();
-	if (ensure(Engine))
-	{
-		Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %S"), *IPAddres));
-	}
-	else
-	{
-		return;
-	}
+	SessionInterface->JoinSession(0, SESSION_NAME, SessionSearch->SearchResults[Index]);
 
-	APlayerController* PC = GetFirstLocalPlayerController();
-	if (ensure(PC))
-	{
-		PC->ClientTravel(IPAddres, ETravelType::TRAVEL_Absolute);
-	}
-	else
-	{
-		return;
-	}*/
+	
 }
 
 void USGameInstance::LoadMainMenu()

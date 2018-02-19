@@ -39,6 +39,8 @@ protected:
 	UFUNCTION()
 	void QuittingGame();
 
+	TOptional<uint32> SelectedIndex;
+
 private:
 
 	UPROPERTY(meta = (BindWidget))
@@ -75,4 +77,6 @@ public:
 	UWSUserWidget(const FObjectInitializer & ObjectInitializer);
 
 	void SetServerList(TArray<FString> ServerNames);
+
+	void SelectIndex(uint32 Index);
 };

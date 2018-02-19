@@ -14,7 +14,19 @@
 			]
 		}
 	],
-	"AdditionalPluginDirectories": [
-		"Intermediate/Plugins"
+	"Plugins": [
+		{
+			"Name": "NativizedAssets",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"AllDesktop",
+		"WindowsNoEditor",
+		"LinuxNoEditor"
 	]
 }

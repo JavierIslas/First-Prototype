@@ -36,7 +36,7 @@ public:
 	void Host() override;
 
 	UFUNCTION(Exec)
-	void Join(const FString& IPAddres) override;
+	void Join(uint32 Index) override;
 
 	void LoadMainMenu() override;
 
@@ -61,4 +61,6 @@ private:
 	void CreateSession();
 
 	void OnFindSessionComplete(bool Success);
+
+	void OnJoinSessionComplete(FName Session, EOnJoinSessionCompleteResult::Type);
 };
