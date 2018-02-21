@@ -9,8 +9,6 @@
 #include "Components/TextBlock.h"
 #include "SServerRow.h"
 
-
-
 UWSUserWidget::UWSUserWidget(const FObjectInitializer & ObjectInitializer)
 {
 	ConstructorHelpers::FClassFinder<UUserWidget> ServerRowBPClass(TEXT("/Game/MenuSystem/ServerRow_WBP"));
@@ -30,7 +28,7 @@ bool UWSUserWidget::Initialize()
 	if (!Success) return false;
 
 	if (!ensure(Host)) return false;
-	Host->OnClicked.AddDynamic(this, &UWSUserWidget::HostServer);
+	Host->OnClicked.AddDynamic(this, &UWSUserWidget::OpenHostMenu);
 
 	if (!ensure(Join)) return false;
 	Join->OnClicked.AddDynamic(this, &UWSUserWidget::OpenJoinMenu);
@@ -44,6 +42,12 @@ bool UWSUserWidget::Initialize()
 	if (!ensure(JoinGame)) return false;
 	JoinGame->OnClicked.AddDynamic(this, &UWSUserWidget::ConectToGame);
 
+	if (!ensure(CancelHost)) return false;
+	CancelHost->OnClicked.AddDynamic(this, &UWSUserWidget::OpenMainMenu);
+
+	if (!ensure(HostGame)) return false;
+	HostGame->OnClicked.AddDynamic(this, &UWSUserWidget::HostServer);
+
 	return true;
 }
 
@@ -51,7 +55,8 @@ void UWSUserWidget::HostServer()
 {
 	if (MI)
 	{
-		MI->Host();
+		FString ServerName = ServerHostName->Text.ToString();
+		MI->Host(ServerName);
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Hosting Server"));
 }
@@ -67,6 +72,11 @@ void UWSUserWidget::OpenJoinMenu()
 	}
 }
 
+void UWSUserWidget::OpenHostMenu()
+{
+	MenuSwitcher->SetActiveWidget(HostMenu);
+}
+
 void UWSUserWidget::OpenMainMenu()
 {
 	if (!ensure(MenuSwitcher)) return;
@@ -74,7 +84,7 @@ void UWSUserWidget::OpenMainMenu()
 	MenuSwitcher->SetActiveWidget(MainMenu);
 }
 
-void UWSUserWidget::SetServerList(TArray<FString> ServerNames)
+void UWSUserWidget::SetServerList(TArray<FServerData> ServerNames)
 {
 
 	UWorld* World = this->GetWorld();
@@ -83,12 +93,15 @@ void UWSUserWidget::SetServerList(TArray<FString> ServerNames)
 	ServerList->ClearChildren();
 
 	uint32 i = 0;
-	for (const FString& ServerName : ServerNames)
+	for (const FServerData& ServerData : ServerNames)
 	{
 		USServerRow* Row = CreateWidget<USServerRow>(World, ServerRowClass);
 
 		if (!ensure(Row != nullptr)) return;
-		Row->ServerName->SetText(FText::FromString(ServerName));
+		Row->ServerName->SetText(FText::FromString(ServerData.Name));
+		Row->HostName->SetText(FText::FromString(ServerData.HostUserName));
+		FString PlayerAmount = FString::Printf(TEXT("%d/%d"), ServerData.CurrentPlayers, ServerData.MaxPlayers);
+		Row->PlayersAmount->SetText(FText::FromString(PlayerAmount));
 		Row->Setup(this, i);
 		++i;
 		ServerList->AddChild(Row);
@@ -98,6 +111,19 @@ void UWSUserWidget::SetServerList(TArray<FString> ServerNames)
 void UWSUserWidget::SelectIndex(uint32 Index)
 {
 	SelectedIndex = Index;
+	UpdateChildren();
+}
+
+void UWSUserWidget::UpdateChildren()
+{
+	for (int32 i = 0; i < ServerList->GetChildrenCount(); ++i)
+	{
+		auto Row = Cast<USServerRow>(ServerList->GetChildAt(i));
+		if (Row)
+		{
+			Row->Selected = (SelectedIndex.IsSet() && SelectedIndex.GetValue() == i);
+		}
+	}
 }
 
 void UWSUserWidget::ConectToGame()

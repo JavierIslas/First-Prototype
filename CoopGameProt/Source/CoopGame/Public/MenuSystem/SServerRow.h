@@ -31,6 +31,15 @@ public:
 
 	UPROPERTY(meta = (BindWidget))
 	class UTextBlock* ServerName;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* HostName;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* PlayersAmount;
 	
 	void Setup(UWSUserWidget* InParent, uint32 InIndex);
+
+	UPROPERTY(BlueprintReadOnly)
+	bool Selected;
 };

@@ -35,6 +35,8 @@ private:
 
 	bool bGameOver;
 
+	uint32 NumberOfPlayers;
+
 protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Game Mode")
@@ -65,9 +67,13 @@ protected:
 public: 
 	ASGameMode();
 
-	virtual void StartPlay() override;
+	//void PostLogin(APlayerController* NewPlayer) override;
 
-	virtual void Tick(float DeltaSeconds) override;
+	//void Logout(AController* Exiting) override;
+
+	void StartPlay() override;
+
+	void Tick(float DeltaSeconds) override;
 
 	UPROPERTY(BlueprintAssignable, Category = "Game Mode")
 	FOnActorKilled OnActorKilled;

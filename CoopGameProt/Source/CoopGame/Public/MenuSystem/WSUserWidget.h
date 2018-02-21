@@ -12,6 +12,22 @@ class UWidget;
 class UPanelWidget;
 class UWidgetSwitcher;
 class UEditableTextBox;
+
+USTRUCT()
+struct FServerData
+{
+	GENERATED_BODY()
+
+	FString Name;
+
+	uint8 CurrentPlayers;
+
+	uint8 MaxPlayers;
+
+	FString HostUserName;
+};
+
+
 /**
  * 
  */
@@ -29,6 +45,9 @@ protected:
 
 	UFUNCTION()
 	void OpenJoinMenu();
+
+	UFUNCTION()
+	void OpenHostMenu();
 
 	UFUNCTION()
 	void OpenMainMenu();
@@ -59,6 +78,12 @@ private:
 	UButton* Cancel;
 
 	UPROPERTY(meta = (BindWidget))
+	UButton* HostGame;
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* CancelHost;
+
+	UPROPERTY(meta = (BindWidget))
 	UWidgetSwitcher* MenuSwitcher;
 
 	UPROPERTY(meta = (BindWidget))
@@ -68,15 +93,23 @@ private:
 	UWidget* JoinMenu;
 
 	UPROPERTY(meta = (BindWidget))
+	UWidget* HostMenu;
+
+	UPROPERTY(meta = (BindWidget))
+	UEditableTextBox* ServerHostName;
+
+	UPROPERTY(meta = (BindWidget))
 	UPanelWidget* ServerList;
 
 	TSubclassOf<class UUserWidget> ServerRowClass;
+
+	void UpdateChildren();
 
 public:
 
 	UWSUserWidget(const FObjectInitializer & ObjectInitializer);
 
-	void SetServerList(TArray<FString> ServerNames);
+	void SetServerList(TArray<FServerData> ServerNames);
 
 	void SelectIndex(uint32 Index);
 };

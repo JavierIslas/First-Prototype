@@ -9,7 +9,9 @@
 #include "MenuSystem/WSUserWidget.h"
 #include "MenuSystem/SMenuWidget.h"
 
-const static FName SESSION_NAME = TEXT("SessionGame");
+const static FName SESSION_NAME = TEXT("Game");
+
+const static FName SERVER_NAME_SETTINGS_KEY = TEXT("ServerName");
 
 USGameInstance::USGameInstance(const FObjectInitializer & ObjectInitializer)
 {
@@ -92,10 +94,11 @@ void USGameInstance::CreateSession()
 	if (SessionInterface.IsValid())
 	{
 		FOnlineSessionSettings SessionSetting;
-		SessionSetting.bIsLANMatch = false;
+		SessionSetting.bIsLANMatch = (IOnlineSubsystem::Get()->GetSubsystemName() == NULL_SUBSYSTEM); // return false if Steam OSS is enable
 		SessionSetting.NumPublicConnections = 4;
 		SessionSetting.bShouldAdvertise = true;
 		SessionSetting.bUsesPresence = true;
+		SessionSetting.Set(SERVER_NAME_SETTINGS_KEY, DesiredServerName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
 		SessionInterface->CreateSession(0, SESSION_NAME, SessionSetting);
 	}
 }
@@ -104,12 +107,26 @@ void USGameInstance::OnFindSessionComplete(bool Success)
 {
 	if (Success && SessionSearch.IsValid() && Menu)
 	{
-		TArray<FString> ServerNames;
+		TArray<FServerData> ServerNames;
 		UE_LOG(LogTemp, Warning, TEXT("Finishing Find Sessions"));
 		for (FOnlineSessionSearchResult& SearchResult : SessionSearch->SearchResults)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Find %s Session"), *SearchResult.GetSessionIdStr());
-			ServerNames.Add(SearchResult.GetSessionIdStr());
+			FServerData Data;
+			
+			Data.MaxPlayers = SearchResult.Session.SessionSettings.NumPublicConnections;
+			Data.CurrentPlayers = Data.MaxPlayers - SearchResult.Session.NumOpenPublicConnections;
+			Data.HostUserName = SearchResult.Session.OwningUserName;
+			FString ServerName;
+			if (SearchResult.Session.SessionSettings.Get(SERVER_NAME_SETTINGS_KEY, ServerName))
+			{
+				Data.Name = ServerName;
+			}
+			else
+			{
+				Data.Name = TEXT("Not Data Found");
+			}
+			ServerNames.Add(Data);
 		}
 		Menu->SetServerList(ServerNames);
 	}
@@ -151,7 +168,7 @@ void USGameInstance::ServerListRefresh()
 	SessionSearch = MakeShareable(new FOnlineSessionSearch());
 	if (SessionSearch.IsValid())
 	{
-		//SessionSearch->bIsLanQuery = true;
+		SessionSearch->bIsLanQuery = false; // false for Steam
 		SessionSearch->MaxSearchResults = 99;
 		SessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals); // For Steam
 		UE_LOG(LogTemp, Warning, TEXT("Starting to Find Sessions"));
@@ -222,11 +239,12 @@ void USGameInstance::LoadMainMenu()
 	}
 }
 
-void USGameInstance::Host()
+void USGameInstance::Host(FString ServerName)
 {
+	DesiredServerName = ServerName;
 	if (SessionInterface.IsValid())
 	{
-		auto ExistingSession = SessionInterface->GetNamedSession(SESSION_NAME);
+		auto ExistingSession = SessionInterface->GetNamedSession(NAME_GameSession);
 		if (ExistingSession != nullptr)
 		{
 			SessionInterface->DestroySession(SESSION_NAME);

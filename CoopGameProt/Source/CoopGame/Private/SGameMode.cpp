@@ -7,7 +7,11 @@
 #include "SHealtComponent.h"
 #include "Engine/EngineTypes.h"
 
-
+/**TODO 
+	if(HasAuthority)
+		GetGameInstance();
+		GameInstance->StartSession();
+**/
 ASGameMode::ASGameMode()
 {
 	TimeBetweenWaves = 2.0f;
@@ -20,6 +24,8 @@ ASGameMode::ASGameMode()
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.TickInterval = 1.0f;
 
+	bUseSeamlessTravel = true;
+
 	bGameOver = false;
 
 }
@@ -27,8 +33,6 @@ ASGameMode::ASGameMode()
 void ASGameMode::StartPlay()
 {
 	Super::StartPlay();
-
-	PrepareForNextWave();
 }
 
 void ASGameMode::Tick(float DeltaSeconds)
@@ -50,6 +54,30 @@ void ASGameMode::StartWave()
 
 	SetWaveState(EWaveState::WaveInProgress);
 }
+
+//void ASGameMode::PostLogin(APlayerController * NewPlayer)
+//{
+//	Super::PostLogin(NewPlayer);
+//	++NumberOfPlayers;
+//
+//	if (NumberOfPlayers = 1)
+//	{
+//		/*UWorld* World = GetWorld();
+//		if (!ensure(World)) return;
+//
+//		bUseSeamlessTravel = true;*/
+//
+//		PrepareForNextWave();
+//
+//		UE_LOG(LogTemp, Warning, TEXT("Reached minimun amount of players"));
+//	}
+//}
+//
+//void ASGameMode::Logout(AController * Exiting)
+//{
+//	Super::Logout(Exiting);
+//	--NumberOfPlayers;
+//}
 
 void ASGameMode::SpawnBotTimerElapsed()
 {
