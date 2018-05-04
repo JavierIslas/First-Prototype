@@ -9,7 +9,7 @@
 #include "MenuSystem/WSUserWidget.h"
 #include "MenuSystem/SMenuWidget.h"
 
-const static FName SESSION_NAME = TEXT("Game");
+//const static FName SESSION_NAME = TEXT("Game"); Unnecessary from 4.18 and onwards
 
 const static FName SERVER_NAME_SETTINGS_KEY = TEXT("ServerName");
 
@@ -99,7 +99,7 @@ void USGameInstance::CreateSession()
 		SessionSetting.bShouldAdvertise = true;
 		SessionSetting.bUsesPresence = true;
 		SessionSetting.Set(SERVER_NAME_SETTINGS_KEY, DesiredServerName, EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);
-		SessionInterface->CreateSession(0, SESSION_NAME, SessionSetting);
+		SessionInterface->CreateSession(0, NAME_GameSession, SessionSetting);
 	}
 }
 
@@ -221,7 +221,7 @@ void USGameInstance::Join(uint32 Index)
 		Menu->Teardown();
 	}
 
-	SessionInterface->JoinSession(0, SESSION_NAME, SessionSearch->SearchResults[Index]);
+	SessionInterface->JoinSession(0, NAME_GameSession, SessionSearch->SearchResults[Index]);
 
 	
 }
@@ -247,7 +247,7 @@ void USGameInstance::Host(FString ServerName)
 		auto ExistingSession = SessionInterface->GetNamedSession(NAME_GameSession);
 		if (ExistingSession != nullptr)
 		{
-			SessionInterface->DestroySession(SESSION_NAME);
+			SessionInterface->DestroySession(NAME_GameSession);
 		}
 		else
 		{

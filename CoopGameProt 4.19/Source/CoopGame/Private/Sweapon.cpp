@@ -25,6 +25,9 @@ ASweapon::ASweapon()
 	BaseDamage = 20.0f;
 	RateOfFire = 200;
 	BulletSpread = 2.0f;
+	MaxBullet = 10;
+	RemainingBullets = MaxBullet;
+	WeaponType = 0;
 
 	//Network funtionality Configuration
 	SetReplicates(true);
@@ -42,70 +45,80 @@ void ASweapon::BeginPlay()
 
 void ASweapon::Fire()
 {
-	if (Role < ROLE_Authority)
+	if (RemainingBullets--)
 	{
-		ServerFire();
-	}
-
-	AActor* Owner = GetOwner();
-	if (Owner)
-	{
-		FVector EyeLocation;
-		FRotator EyeRotation;
-		Owner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
-
-		//BulletSpread Calcualtion
-		FVector ShotDirection = EyeRotation.Vector();
-		float HalfRad = FMath::DegreesToRadians(BulletSpread);
-		ShotDirection = FMath::VRandCone(ShotDirection, HalfRad, HalfRad);
-		//
-		
-		FVector TraceEnd = EyeLocation + (EyeRotation.Vector() * 10000);
-		FCollisionQueryParams QueryParams;
-		QueryParams.AddIgnoredActor(Owner);
-		QueryParams.AddIgnoredActor(this);
-		QueryParams.bTraceComplex = true;
-		QueryParams.bReturnPhysicalMaterial = true;
-
-		FVector TracerEndPoint = TraceEnd;
-
-		EPhysicalSurface SurfaceType = SurfaceType_Default;
-
-		FHitResult Hit;
-		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, COLLISION_WEAPON, QueryParams))
+		if (Role < ROLE_Authority)
 		{
-			AActor* HitActor = Hit.GetActor();
+			ServerFire();
+		}
 
-			SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
-			float actualDamage = BaseDamage;
-			if (SurfaceType == SURFACE_FLESHVULNERABLE)
+		AActor* Owner = GetOwner();
+		if (Owner)
+		{
+			FVector EyeLocation;
+			FRotator EyeRotation;
+			Owner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
+
+			//BulletSpread Calcualtion
+			FVector ShotDirection = EyeRotation.Vector();
+			float HalfRad = FMath::DegreesToRadians(BulletSpread);
+			ShotDirection = FMath::VRandCone(ShotDirection, HalfRad, HalfRad);
+			//
+
+			FVector TraceEnd = EyeLocation + (EyeRotation.Vector() * 10000);
+			FCollisionQueryParams QueryParams;
+			QueryParams.AddIgnoredActor(Owner);
+			QueryParams.AddIgnoredActor(this);
+			QueryParams.bTraceComplex = true;
+			QueryParams.bReturnPhysicalMaterial = true;
+
+			FVector TracerEndPoint = TraceEnd;
+
+			EPhysicalSurface SurfaceType = SurfaceType_Default;
+
+			FHitResult Hit;
+			if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, COLLISION_WEAPON, QueryParams))
 			{
-				actualDamage *= 4.0f;
+				AActor* HitActor = Hit.GetActor();
+				SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
+				float actualDamage = BaseDamage;
+				if (SurfaceType == SURFACE_FLESHVULNERABLE)
+				{
+					actualDamage *= 4.0f;
+				}
+
+				UGameplayStatics::ApplyPointDamage(HitActor, actualDamage, ShotDirection, Hit, Owner->GetInstigatorController(), Owner, DamageType);
+
+				PlayImpactEffect(SurfaceType, Hit.ImpactPoint);
+
+				TracerEndPoint = Hit.ImpactPoint;
+
+			}
+			if (DebugWeaponDrawing > 0)
+			{
+				DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::Red, false, 1.0f, 0, 1.0f);
 			}
 
-			UGameplayStatics::ApplyPointDamage(HitActor, actualDamage, ShotDirection, Hit, Owner->GetInstigatorController(), Owner, DamageType);
+			PlayFireEffect(TracerEndPoint);
 
-			PlayImpactEffect(SurfaceType, Hit.ImpactPoint);
+			if (Role == ROLE_Authority)
+			{
+				HitScanTrace.TraceTo = TracerEndPoint;
 
-			TracerEndPoint = Hit.ImpactPoint;
-
+				HitScanTrace.SurfaceType = SurfaceType;
+			}
+			LastFireTime = GetWorld()->TimeSeconds;
 		}
-		if (DebugWeaponDrawing > 0)
-		{
-			DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::Red, false, 1.0f, 0, 1.0f);
-		}
-
-		PlayFireEffect(TracerEndPoint);
-
-		if (Role == ROLE_Authority)
-		{
-			HitScanTrace.TraceTo = TracerEndPoint;
-
-			HitScanTrace.SurfaceType = SurfaceType;
-		}
-
-		LastFireTime = GetWorld()->TimeSeconds;
 	}
+	else
+	{
+		StopFire();
+	}
+}
+
+void ASweapon::Reload()
+{
+	RemainingBullets = MaxBullet;
 }
 
 void ASweapon::OnRep_HitScanTrace()

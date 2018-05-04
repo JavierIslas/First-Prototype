@@ -72,6 +72,18 @@ protected:
 	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Player")
 	bool bDied;
 
+	void ReloadWeapon();
+
+	void ReloadEnd();
+
+	UPROPERTY(BlueprintReadOnly, Category = "Player")
+	bool bReloading = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Player")
+	bool bShooting = false;
+
+	FTimerHandle TimerHandle_ReloadTime;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -2,6 +2,7 @@
 
 #include "SCharacter.h"
 #include "Camera/CameraComponent.h"
+#include "TimerManager.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PawnMovementComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -61,8 +62,18 @@ void ASCharacter::BeginPlay()
 			CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);
 		}
 	}
+}
 
-	
+// Called every frame
+void ASCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	float TargetFOV = bWantToZoom ? ZoomedFOV : DefaultFOV;
+
+	float NewFOV = FMath::FInterpTo(Camera->FieldOfView, TargetFOV, DeltaTime, ZoomInterpSpeed);
+
+	Camera->SetFieldOfView(NewFOV);
 }
 
 void ASCharacter::MoveForware(float Value)
@@ -98,10 +109,12 @@ void ASCharacter::ZoomOut()
 
 void ASCharacter::StartFire()
 {
-	if (CurrentWeapon)
+	if (CurrentWeapon && (CurrentWeapon->GetRemainingBullets() > 0))
 	{
 		CurrentWeapon->StartFire();
+		bShooting = true;
 	}
+	// TO DO else Empty Weapon Animation
 }
 
 void ASCharacter::StopFire()
@@ -109,6 +122,7 @@ void ASCharacter::StopFire()
 	if (CurrentWeapon)
 	{
 		CurrentWeapon->StopFire();
+		bShooting = false;
 	}
 }
 
@@ -127,16 +141,20 @@ void ASCharacter::OnHealthChange(USHealtComponent* HealthComp, float Health, flo
 	}
 }
 
-// Called every frame
-void ASCharacter::Tick(float DeltaTime)
+void ASCharacter::ReloadWeapon()
 {
-	Super::Tick(DeltaTime);
+	if (!bReloading)
+	{
+		bReloading = true;
+		GetWorldTimerManager().SetTimer(TimerHandle_ReloadTime, this, &ASCharacter::ReloadEnd, 0.1f, false, 2.0);
+	}
+}
 
-	float TargetFOV = bWantToZoom ? ZoomedFOV : DefaultFOV;
-
-	float NewFOV = FMath::FInterpTo(Camera->FieldOfView, TargetFOV, DeltaTime, ZoomInterpSpeed);
-
-	Camera->SetFieldOfView(NewFOV);
+void ASCharacter::ReloadEnd()
+{
+	//TO DO Reload Logic
+	CurrentWeapon->Reload();
+	bReloading = false;
 }
 
 // Called to bind functionality to input
@@ -161,6 +179,8 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ASCharacter::StartFire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &ASCharacter::StopFire);
+
+	PlayerInputComponent->BindAction("Reload", IE_Released, this, &ASCharacter::ReloadWeapon);
 }
 
 FVector ASCharacter::GetPawnViewLocation() const

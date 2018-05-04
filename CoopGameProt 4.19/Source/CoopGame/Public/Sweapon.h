@@ -91,6 +91,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon", meta = (ClampMin=0.0f))
 	float BulletSpread;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon", meta = (ClampMin = 1))
+	uint8 MaxBullet;
+
+	int8 RemainingBullets;
+
 	UPROPERTY(ReplicatedUsing=OnRep_HitScanTrace)
 	FHitScanTrace HitScanTrace;
 
@@ -103,5 +108,10 @@ public:
 
 	void StopFire();
 	
-	
+	void Reload();
+
+	int8 GetRemainingBullets() { return RemainingBullets; };
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	uint8 WeaponType;
 };
