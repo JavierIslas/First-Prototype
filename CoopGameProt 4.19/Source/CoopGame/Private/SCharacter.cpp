@@ -126,6 +126,13 @@ void ASCharacter::StopFire()
 	}
 }
 
+int ASCharacter::GetCurrentWeaponType()
+{
+	if(CurrentWeapon)
+		return CurrentWeapon->GetWeaponType();
+	else return 0;
+}
+
 void ASCharacter::OnHealthChange(USHealtComponent* HealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
 {
 	if (Health <= 0.0f && !bDied)

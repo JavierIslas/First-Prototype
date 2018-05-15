@@ -99,6 +99,9 @@ protected:
 	UPROPERTY(ReplicatedUsing=OnRep_HitScanTrace)
 	FHitScanTrace HitScanTrace;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	int WeaponType;
+
 	UFUNCTION()
 	void OnRep_HitScanTrace();
 
@@ -112,6 +115,6 @@ public:
 
 	int8 GetRemainingBullets() { return RemainingBullets; };
 
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	uint8 WeaponType;
+	int GetWeaponType() { return WeaponType; }
+
 };

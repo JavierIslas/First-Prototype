@@ -43,8 +43,6 @@ protected:
 
 	void EndCrouch();
 
-	bool bWantToZoom;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Player")
 	float ZoomedFOV;
 
@@ -71,6 +69,9 @@ protected:
 
 	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Player")
 	bool bDied;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Player")
+	bool bWantToZoom;
 
 	void ReloadWeapon();
 
@@ -99,4 +100,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player")
 	void StopFire();
 	
+	UFUNCTION(BlueprintCallable, Category = "Player")
+	int GetCurrentWeaponType();
+
 };
