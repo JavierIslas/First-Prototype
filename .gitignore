@@ -83,5 +83,9 @@ CoopGameProt/Build/
 *.zip
 CoopGameProt/WindowsNoEditor/
 CoopGameProt.rar
+<<<<<<< HEAD
 CoopGameProt 4.19/Content/ParagonTwinblast/
 CoopGameProt 4.19/Content/InfinityBladeGrassLands/
+=======
+SteamAPI 4.18/Content/SoulCity/
+>>>>>>> 4911d7b3ccfc7d8afb97301543d87d2430358903
