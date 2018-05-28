@@ -9,6 +9,7 @@
 #include "CoopGame.h"
 #include "Sweapon.h"
 #include "SHealtComponent.h"
+#include "InventoryComponent.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -31,11 +32,15 @@ ASCharacter::ASCharacter()
 
 	HealthComponent = CreateDefaultSubobject<USHealtComponent>(TEXT("HealthComp"));
 
+	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("Inventory"));
+
 	ZoomedFOV = 65.0f;
 
 	ZoomInterpSpeed = 20.0f;
 
 	WeaponSocketName = "WeaponSocket";
+
+	WeaponNumber = -1;
 
 	bDied = false;
 
@@ -52,10 +57,8 @@ void ASCharacter::BeginPlay()
 
 	if (Role == ROLE_Authority)
 	{
-		//Spawn default Weapon
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		CurrentWeapon = GetWorld()->SpawnActor<ASweapon>(StartedWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+		
+		CurrentWeapon = InventoryComponent->NextWeapon(WeaponNumber);
 		if (CurrentWeapon)
 		{
 			CurrentWeapon->SetOwner(this);
@@ -126,11 +129,11 @@ void ASCharacter::StopFire()
 	}
 }
 
-int ASCharacter::GetCurrentWeaponType()
+WeaponTypeEnum ASCharacter::GetCurrentWeaponType()
 {
 	if(CurrentWeapon)
 		return CurrentWeapon->GetWeaponType();
-	else return 0;
+	else return WeaponTypeEnum::EMPTY;
 }
 
 void ASCharacter::OnHealthChange(USHealtComponent* HealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
@@ -164,6 +167,40 @@ void ASCharacter::ReloadEnd()
 	bReloading = false;
 }
 
+void ASCharacter::NextWeapon()
+{
+	if (InventoryComponent)
+	{
+		ASweapon * aux = InventoryComponent->NextWeapon(WeaponNumber);
+		if (aux)
+		{
+			ChangeWeapon(aux);
+		}
+	}
+	
+}
+
+void ASCharacter::PreviousWeapon()
+{
+	if (InventoryComponent)
+	{
+		ASweapon * aux = InventoryComponent->PreviousWeapon(WeaponNumber);
+		if (aux)
+		{
+			ChangeWeapon(aux);
+		}
+	}
+}
+
+void ASCharacter::ChangeWeapon(ASweapon * NewWeapon)
+{
+	CurrentWeapon->Destroy();
+	CurrentWeapon = NewWeapon;
+	CurrentWeapon->SetOwner(this);
+	CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);
+	UE_LOG(LogTemp, Warning, TEXT("%d"), this->WeaponNumber);
+}
+
 // Called to bind functionality to input
 void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -188,6 +225,9 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &ASCharacter::StopFire);
 
 	PlayerInputComponent->BindAction("Reload", IE_Released, this, &ASCharacter::ReloadWeapon);
+
+	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, this, &ASCharacter::NextWeapon);
+	PlayerInputComponent->BindAction("PreviousWeapon", IE_Pressed, this, &ASCharacter::PreviousWeapon);
 }
 
 FVector ASCharacter::GetPawnViewLocation() const

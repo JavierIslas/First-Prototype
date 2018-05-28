@@ -11,6 +11,16 @@ class USkeletalMeshComponent;
 class UParticleSystem;
 class UCameraShake;
 
+UENUM(BlueprintType)
+enum class WeaponTypeEnum : uint8
+{
+	WT_1	UMETA(DisplayName = "Pistol"),
+	WT_2	UMETA(DisplayName = "Rifle"),
+	WT_3	UMETA(DisplayName = "Shotgun"),
+	WT_4	UMETA(DisplayName = "Launcher"),
+	EMPTY	UMETA(DisplayName = "Melee")
+};
+
 USTRUCT()
 struct FHitScanTrace
 {
@@ -53,8 +63,13 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 	TSubclassOf<UDamageType> DamageType;
 
+	//Bullet Origin Point Vetor
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 	FName SocketName;
+
+	//Socket Name for the unequiped place
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
+	FName BackSocketName;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 	FName TargetName;
@@ -99,8 +114,8 @@ protected:
 	UPROPERTY(ReplicatedUsing=OnRep_HitScanTrace)
 	FHitScanTrace HitScanTrace;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	int WeaponType;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+	WeaponTypeEnum WeaponType;
 
 	UFUNCTION()
 	void OnRep_HitScanTrace();
@@ -113,8 +128,12 @@ public:
 	
 	void Reload();
 
+	FName GetBackSocketName() { return BackSocketName; };
+
 	int8 GetRemainingBullets() { return RemainingBullets; };
 
-	int GetWeaponType() { return WeaponType; }
+	WeaponTypeEnum GetWeaponType() { return WeaponType; }
+
+	uint8 EnumToInt(WeaponTypeEnum aux);
 
 };

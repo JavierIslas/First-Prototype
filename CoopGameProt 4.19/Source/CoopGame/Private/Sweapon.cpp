@@ -27,7 +27,6 @@ ASweapon::ASweapon()
 	BulletSpread = 2.0f;
 	MaxBullet = 10;
 	RemainingBullets = MaxBullet;
-	WeaponType = 0;
 
 	//Network funtionality Configuration
 	SetReplicates(true);
@@ -119,6 +118,29 @@ void ASweapon::Fire()
 void ASweapon::Reload()
 {
 	RemainingBullets = MaxBullet;
+}
+
+uint8 ASweapon::EnumToInt(WeaponTypeEnum aux)
+{
+	switch (aux)
+	{
+	case WeaponTypeEnum::WT_1:
+		return 0;
+		break;
+	case WeaponTypeEnum::WT_2:
+		return 1;
+		break;
+	case WeaponTypeEnum::WT_3:
+		return 2;
+		break;
+	case WeaponTypeEnum::WT_4:
+		return 3;
+		break;
+	case WeaponTypeEnum::EMPTY:
+	default:
+		return 4;
+		break;
+	}
 }
 
 void ASweapon::OnRep_HitScanTrace()

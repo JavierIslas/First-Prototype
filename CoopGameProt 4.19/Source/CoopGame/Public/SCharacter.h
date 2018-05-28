@@ -11,6 +11,7 @@ class UCameraComponent;
 class USpringArmComponent;
 class ASweapon;
 class USHealtComponent;
+class UInventoryComponent;
 
 UCLASS()
 class COOPGAME_API ASCharacter : public ACharacter
@@ -39,6 +40,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
 	USHealtComponent* HealthComponent;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
+	UInventoryComponent* InventoryComponent;
+
 	void BeginCrouch();
 
 	void EndCrouch();
@@ -58,8 +62,9 @@ protected:
 	UPROPERTY(Replicated)
 	ASweapon* CurrentWeapon;
 
+	//Index for the Inventory Array
 	UPROPERTY(EditDefaultsOnly, Category = "Player")
-	TSubclassOf<ASweapon> StartedWeaponClass;
+	int32 WeaponNumber;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Player")
 	FName WeaponSocketName;
@@ -83,6 +88,12 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Player")
 	bool bShooting = false;
 
+	void NextWeapon();
+
+	void PreviousWeapon();
+
+	void ChangeWeapon(ASweapon * NewWeapon);
+
 	FTimerHandle TimerHandle_ReloadTime;
 
 public:	
@@ -101,6 +112,6 @@ public:
 	void StopFire();
 	
 	UFUNCTION(BlueprintCallable, Category = "Player")
-	int GetCurrentWeaponType();
+	WeaponTypeEnum GetCurrentWeaponType();
 
 };

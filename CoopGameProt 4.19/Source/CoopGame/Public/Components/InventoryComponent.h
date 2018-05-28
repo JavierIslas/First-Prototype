@@ -4,20 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Sweapon.h"
 #include "InventoryComponent.generated.h"
 
-class SWeapon;
+class ASweapon;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FInventorySlot
 {
 	GENERATED_BODY();
 
 public:
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
 	bool Equiped;
 
-	SWeapon* Weapon;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
+	TSubclassOf<ASweapon> Weapon;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
 	uint8 ClipsAmount;
 };
 
@@ -31,17 +36,27 @@ public:
 	// Sets default values for this component's properties
 	UInventoryComponent();
 
-	SWeapon* NextWeapon();
+	//void Initialization();
 
-	SWeapon* LastWeapon();
+	ASweapon* NextWeapon(int32 &Index);
+
+	ASweapon* PreviousWeapon(int32 &Index);
+
+	int32 GetAllWeaponAmount() { return Inventory.Num(); }
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Inventory")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Inventory")
 	TArray<FInventorySlot> Inventory;
-	
+
+private:
+
+	ASweapon* SpawnWeapon(int32 Index);
+
+	UPROPERTY(EditDefaultsOnly, Category = "Inventory")
+	TArray<TSubclassOf<ASweapon>> AllWeapons;
 		
 	
 };
