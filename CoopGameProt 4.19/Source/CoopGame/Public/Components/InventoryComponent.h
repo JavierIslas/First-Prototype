@@ -19,8 +19,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
 	bool Equiped;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
-	TSubclassOf<ASweapon> Weapon;
+	ASweapon* Weapon;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Slot")
 	uint8 ClipsAmount;

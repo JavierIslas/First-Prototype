@@ -17,15 +17,17 @@ UInventoryComponent::UInventoryComponent()
 
 ASweapon * UInventoryComponent::NextWeapon(int32 &Index)
 {
-	for (int32 i = ++Index; i == Index; i++)
+	int32 i = Index + 1;
+	//auto max = Inventory.Num();
+	for (i; i != Index; i++)
 	{
 		if (Inventory.IsValidIndex(i) && (Inventory[i].Equiped))
 		{
 			Index = i;
-			return SpawnWeapon(i);
+			return Inventory[i].Weapon;
 		}
 
-		if (i >= Inventory.Num())
+		if(i >= Inventory.Num())
 		{
 			i = 0;
 		}
@@ -36,7 +38,8 @@ ASweapon * UInventoryComponent::NextWeapon(int32 &Index)
 
 ASweapon * UInventoryComponent::PreviousWeapon(int32 &Index)
 {
-	for (int32 i = --Index; i == Index; i--)
+	int32 i = Index - 1;
+	for (i; i != Index; i--)
 	{
 		if (i < 0)
 		{
@@ -46,10 +49,8 @@ ASweapon * UInventoryComponent::PreviousWeapon(int32 &Index)
 		if (Inventory.IsValidIndex(i) && (Inventory[i].Equiped))
 		{
 			Index = i;
-			return SpawnWeapon(i);
-
+			return Inventory[i].Weapon;
 		}
-
 	}
 
 	return nullptr;
@@ -59,8 +60,8 @@ ASweapon * UInventoryComponent::SpawnWeapon(int32 Index)
 {
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	ASweapon* DefaultInstance = GetWorld()->SpawnActor<ASweapon>(Inventory[Index].Weapon, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
-	return DefaultInstance;
+	Inventory[Index].Weapon = GetWorld()->SpawnActor<ASweapon>(AllWeapons[Index], FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+	return Inventory[Index].Weapon;
 }
 
 // Called when the game starts
@@ -68,8 +69,9 @@ void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
-	
+	for (int i = 0; i < AllWeapons.Num(); i++)
+	{
+		if (!(AllWeapons.IsValidIndex(i))) { break; }
+		SpawnWeapon(i);
+	}	
 }
-
-

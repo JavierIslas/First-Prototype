@@ -120,9 +120,9 @@ void ASweapon::Reload()
 	RemainingBullets = MaxBullet;
 }
 
-uint8 ASweapon::EnumToInt(WeaponTypeEnum aux)
+int ASweapon::EnumToInt()
 {
-	switch (aux)
+	switch (WeaponType)
 	{
 	case WeaponTypeEnum::WT_1:
 		return 0;

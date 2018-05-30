@@ -48,7 +48,7 @@ void USHealtComponent::HandleTakeAnyDamage(AActor* DamagedActor, float Damage, c
 	}
 	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
 
-	UE_LOG(LogTemp, Log, TEXT("Health Changed : %s"), *FString::SanitizeFloat(Health));
+	//UE_LOG(LogTemp, Log, TEXT("Health Changed : %s"), *FString::SanitizeFloat(Health));
 
 	bIsDead = Health <= 0.0f;
 
@@ -79,7 +79,7 @@ void USHealtComponent::Heal(float HealAmount)
 
 	Health = FMath::Clamp(Health + HealAmount, 0.0f, DefaultHealth);
 
-	UE_LOG(LogTemp, Log, TEXT("Health Changed : %s (+%s)"), *FString::SanitizeFloat(Health), *FString::SanitizeFloat(HealAmount));
+	//UE_LOG(LogTemp, Log, TEXT("Health Changed : %s (+%s)"), *FString::SanitizeFloat(Health), *FString::SanitizeFloat(HealAmount));
 
 	OnHealthChanged.Broadcast(this, Health, HealAmount, nullptr, nullptr, nullptr);
 

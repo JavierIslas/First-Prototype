@@ -134,6 +134,6 @@ public:
 
 	WeaponTypeEnum GetWeaponType() { return WeaponType; }
 
-	uint8 EnumToInt(WeaponTypeEnum aux);
+	int EnumToInt();
 
 };
