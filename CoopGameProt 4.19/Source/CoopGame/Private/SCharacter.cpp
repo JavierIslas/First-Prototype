@@ -194,11 +194,16 @@ void ASCharacter::PreviousWeapon()
 
 void ASCharacter::ChangeWeapon(ASweapon * NewWeapon)
 {
-	//CurrentWeapon->Destroy();
+	UnequipWeapon();
 	CurrentWeapon = NewWeapon;
 	CurrentWeapon->SetOwner(this);
 	CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);
 	UE_LOG(LogTemp, Warning, TEXT("%d, Weapon: %d"), this->WeaponNumber, CurrentWeapon->EnumToInt());
+}
+
+void ASCharacter::UnequipWeapon()
+{
+	CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, CurrentWeapon->GetBackSocketName());
 }
 
 // Called to bind functionality to input

@@ -22,7 +22,6 @@ public:
 	// Sets default values for this character's properties
 	ASCharacter();
 
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -93,6 +92,10 @@ protected:
 	void PreviousWeapon();
 
 	void ChangeWeapon(ASweapon * NewWeapon);
+
+	void UnequipWeapon();
+
+
 
 	FTimerHandle TimerHandle_ReloadTime;
 

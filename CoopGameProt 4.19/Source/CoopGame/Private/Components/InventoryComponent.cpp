@@ -17,9 +17,7 @@ UInventoryComponent::UInventoryComponent()
 
 ASweapon * UInventoryComponent::NextWeapon(int32 &Index)
 {
-	int32 i = Index + 1;
-	//auto max = Inventory.Num();
-	for (i; i != Index; i++)
+	for (int32 i = Index + 1; i != Index; i++)
 	{
 		if (Inventory.IsValidIndex(i) && (Inventory[i].Equiped))
 		{
@@ -27,7 +25,7 @@ ASweapon * UInventoryComponent::NextWeapon(int32 &Index)
 			return Inventory[i].Weapon;
 		}
 
-		if(i >= Inventory.Num())
+		if(i >= (Inventory.Num() - 1))
 		{
 			i = 0;
 		}
