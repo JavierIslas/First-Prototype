@@ -21,6 +21,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Health Component")
 	uint8 Team;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Health Component")
+	bool bHasTeam;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

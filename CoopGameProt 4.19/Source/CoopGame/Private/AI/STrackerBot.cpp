@@ -144,7 +144,7 @@ void ASTrackerBot::SelfDestruct()
 	{
 		TArray<AActor* > IgnoredActors;
 		IgnoredActors.Add(this);
-		UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, nullptr, IgnoredActors, this, GetInstigatorController(), true);
+		UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, nullptr, IgnoredActors, this, GetInstigatorController(), true);// , ECollisionChannel::ECC_Visibility);
 		
 		if (DebugTrackerbotDrawing)
 		{

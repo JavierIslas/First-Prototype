@@ -11,6 +11,8 @@ USHealtComponent::USHealtComponent()
 
 	bIsDead = false;
 
+	bHasTeam = true;
+
 	SetIsReplicated(true);
 
 	Team = 255;
@@ -48,7 +50,7 @@ void USHealtComponent::HandleTakeAnyDamage(AActor* DamagedActor, float Damage, c
 	}
 	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
 
-	//UE_LOG(LogTemp, Log, TEXT("Health Changed : %s"), *FString::SanitizeFloat(Health));
+	UE_LOG(LogTemp, Log, TEXT("Health Changed to: %s, on %s"), *FString::SanitizeFloat(Health), *GetOwner()->GetName());
 
 	bIsDead = Health <= 0.0f;
 
@@ -91,7 +93,7 @@ float USHealtComponent::GetHealth() const
 }
 
 bool USHealtComponent::IsFriendly(AActor* A, AActor* B)
-{
+{	
 	if (A == nullptr || B == nullptr)
 	{
 		return true;
@@ -101,6 +103,10 @@ bool USHealtComponent::IsFriendly(AActor* A, AActor* B)
 	if (HealthComponentA == nullptr || HealthComponentB == nullptr)
 	{
 		return true;
+	}
+	if (!HealthComponentA->bHasTeam)
+	{
+		return false;
 	}
 	return HealthComponentA->Team == HealthComponentB->Team;
 }

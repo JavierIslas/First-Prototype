@@ -47,7 +47,7 @@ protected:
 
 	virtual void BeginPlay();
 
-	void Fire();
+	virtual void Fire();
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void ServerFire();
