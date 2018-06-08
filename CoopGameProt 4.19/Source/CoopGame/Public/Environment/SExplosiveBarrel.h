@@ -3,21 +3,21 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Environment/SBasicEnvironmetActor.h"
 #include "SExplosiveBarrel.generated.h"
+
 
 class UParticleSystem;
 class USHealtComponent;
 
+/**
+ * 
+ */
 
 UCLASS()
-class COOPGAME_API ASExplosiveBarrel : public AActor
+class COOPGAME_API ASExplosiveBarrel : public ASBasicEnvironmetActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ASExplosiveBarrel();
 
 protected:
 	// Called when the game starts or when spawned
@@ -32,12 +32,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Barrel")
 	UParticleSystem* Smoke;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
-	class UStaticMeshComponent* Body;
-
-	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
-	class USceneComponent* EndTrace;
-
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class URadialForceComponent* RadialForceComp;
 
@@ -49,7 +43,15 @@ protected:
 
 	UFUNCTION()
 	void OnRep_Exploded();
-	
+
+	UPROPERTY(ReplicatedUsing = OnRep_Burning)
+	bool bBurning;
+
+	UFUNCTION()
+	void OnRep_Burning();
+
+	void MakeExplosion();
+
 	UPROPERTY(EditDefaultsOnly, Category = "Explotion")
 	float ExplosionDamage;
 
@@ -64,15 +66,15 @@ protected:
 
 	FTimerHandle TimerHandel_SelfDamage;
 
+	FTimerHandle TimerHandel_Burning;
+
 	UFUNCTION()
-	void OnHealthChanged(USHealtComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType,class AController* InstigatedBy, AActor* DamageCauser);
+	void OnHealthChanged(USHealtComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
+public:
 
-public:	
+	ASExplosiveBarrel();
 
-	// Called every frame
-	//virtual void Tick(float DeltaTime) override;
+	void Action(AActor* Intigator) override;
 
-	void Action(AActor* Intigator);
-	
 };

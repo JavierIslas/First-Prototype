@@ -50,7 +50,7 @@ void USHealtComponent::HandleTakeAnyDamage(AActor* DamagedActor, float Damage, c
 	}
 	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
 
-	UE_LOG(LogTemp, Log, TEXT("Health Changed to: %s, on %s"), *FString::SanitizeFloat(Health), *GetOwner()->GetName());
+	//UE_LOG(LogTemp, Log, TEXT("Health Changed to: %s, on %s"), *FString::SanitizeFloat(Health), *GetOwner()->GetName());
 
 	bIsDead = Health <= 0.0f;
 
@@ -104,7 +104,7 @@ bool USHealtComponent::IsFriendly(AActor* A, AActor* B)
 	{
 		return true;
 	}
-	if (!HealthComponentA->bHasTeam)
+	if (!HealthComponentA->bHasTeam || !HealthComponentB->bHasTeam)
 	{
 		return false;
 	}
