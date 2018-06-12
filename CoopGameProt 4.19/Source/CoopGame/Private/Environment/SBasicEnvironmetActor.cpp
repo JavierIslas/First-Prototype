@@ -4,6 +4,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Components/SphereComponent.h"
+#include "../SCharacter.h"
 
 
 // Sets default values
@@ -35,6 +36,28 @@ void ASBasicEnvironmetActor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	Collision->OnComponentBeginOverlap.AddDynamic(this, &ASBasicEnvironmetActor::ActorBeginOverlap);
+	Collision->OnComponentEndOverlap.AddDynamic(this, &ASBasicEnvironmetActor::ActorEndOverlap);
+}
+
+void ASBasicEnvironmetActor::ActorBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
+{
+	//TODO Implement a queue of Object and add push this
+	ASCharacter * Aux = Cast<ASCharacter>(OtherActor);
+	if (Aux)
+	{
+		Aux->SetObject(this);
+	}
+}
+
+void ASBasicEnvironmetActor::ActorEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	//TODO Implement a queue of Object and delete this from there
+	ASCharacter * Aux = Cast<ASCharacter>(OtherActor);
+	if (Aux)
+	{
+		Aux->SetObject(nullptr);
+	}
 }
 
 void ASBasicEnvironmetActor::Action(AActor * Intigator)

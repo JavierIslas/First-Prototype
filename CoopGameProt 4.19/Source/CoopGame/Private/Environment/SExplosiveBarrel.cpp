@@ -29,7 +29,7 @@ ASExplosiveBarrel::ASExplosiveBarrel()
 	bBurning = false;
 	ExplosionDamage = 100.0f;
 	SelfDamageInterval = 0.25;
-
+	ForceMagnitude = 50000;
 	ExplosionImpulse = 400;
 
 
@@ -50,7 +50,8 @@ void ASExplosiveBarrel::OnRep_Exploded()
 void ASExplosiveBarrel::OnRep_Burning()
 {
 	FVector Location = GetActorLocation() + FVector(0, 0, 100);
-	UGameplayStatics::SpawnEmitterAttached(Fire, Particle, "ParticleEmitter", Location, GetActorRotation(), EAttachLocation::KeepWorldPosition);
+	UGameplayStatics::SpawnEmitterAttached(Fire, Particle, "ParticleEmitter", Location, GetActorRotation(),
+EAttachLocation::KeepWorldPosition);
 }
 
 void ASExplosiveBarrel::MakeExplosion()
@@ -74,7 +75,8 @@ void ASExplosiveBarrel::MakeExplosion()
 	OnRep_Exploded();
 }
 
-void ASExplosiveBarrel::OnHealthChanged(USHealtComponent * OwningHealthComp, float Health, float HealthDelta, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+void ASExplosiveBarrel::OnHealthChanged(USHealtComponent * OwningHealthComp, float Health, float HealthDelta, 
+const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
 	if (bBurning) { return; }
 
@@ -86,14 +88,32 @@ void ASExplosiveBarrel::OnHealthChanged(USHealtComponent * OwningHealthComp, flo
 	}
 }
 
-void ASExplosiveBarrel::Action(AActor* Intigator)
+void ASExplosiveBarrel::ActorBeginOverlap(UPrimitiveComponent * OverlappedComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp,
+int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
+	Super::ActorBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
+
+
+}
+
+void ASExplosiveBarrel::ActorEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+int32 OtherBodyIndex)
+{
+	Super::ActorEndOverlap(OverlappedComp, OtherActor, OtherComp, OtherBodyIndex);
+
+
+}
+
+void ASExplosiveBarrel::Action(AActor* Intigator)
+{	
 	if (bState) {
-		// TODO: Rotate Body 90 degreed on X or Y axis
+		FVector Direction;
+		FRotator Rotator;
+		Intigator->GetActorEyesViewPoint(Direction, Rotator);
+		Body->AddImpulse(Direction * ForceMagnitude);
 	}
-	else
-	{
-		//TODO: Apply Force on the Direction of Intigator->GetForwardVector();
+	else {
+		Body->AddImpulse(Intigator->GetActorForwardVector() * ForceMagnitude);
 	}
 }
 

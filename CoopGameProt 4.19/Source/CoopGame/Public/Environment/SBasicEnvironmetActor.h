@@ -19,7 +19,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	class UStaticMeshComponent* Body;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
@@ -28,7 +28,14 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
 	class USceneComponent* Particle;
 
-	class UStaticMeshComponent* GetBody() { return Body; }
+	UFUNCTION()
+	virtual void ActorBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult);
+
+	UFUNCTION()
+	virtual void ActorEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Interaction")
+	FText LabelText;
 
 public:
 

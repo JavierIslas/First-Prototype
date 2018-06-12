@@ -10,6 +10,7 @@
 #include "Sweapon.h"
 #include "SHealtComponent.h"
 #include "InventoryComponent.h"
+#include "SBasicEnvironmetActor.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -43,6 +44,8 @@ ASCharacter::ASCharacter()
 	WeaponNumber = -1;
 
 	bDied = false;
+
+	Object = nullptr;
 
 }
 
@@ -136,6 +139,12 @@ WeaponTypeEnum ASCharacter::GetCurrentWeaponType()
 	else return WeaponTypeEnum::EMPTY;
 }
 
+void ASCharacter::SetObject(AActor * Reference)
+{
+	//TODO Check Valid Type
+	Object = Cast<ASBasicEnvironmetActor>(Reference);
+}
+
 void ASCharacter::OnHealthChange(USHealtComponent* HealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser)
 {
 	if (Health <= 0.0f && !bDied)
@@ -206,6 +215,14 @@ void ASCharacter::UnequipWeapon()
 	CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, CurrentWeapon->GetBackSocketName());
 }
 
+void ASCharacter::Interact()
+{
+	if (Object)
+	{
+		Object->Action(this);
+	}
+}
+
 // Called to bind functionality to input
 void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -233,6 +250,8 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, this, &ASCharacter::NextWeapon);
 	PlayerInputComponent->BindAction("PreviousWeapon", IE_Pressed, this, &ASCharacter::PreviousWeapon);
+
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ASCharacter::Interact);
 }
 
 FVector ASCharacter::GetPawnViewLocation() const

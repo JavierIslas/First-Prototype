@@ -12,6 +12,7 @@ class USpringArmComponent;
 class ASweapon;
 class USHealtComponent;
 class UInventoryComponent;
+class ASBasicEnvironmetActor;
 
 UCLASS()
 class COOPGAME_API ASCharacter : public ACharacter
@@ -87,6 +88,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Player")
 	bool bShooting = false;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Environment")
+	ASBasicEnvironmetActor* Object;
+
 	void NextWeapon();
 
 	void PreviousWeapon();
@@ -95,7 +99,7 @@ protected:
 
 	void UnequipWeapon();
 
-
+	void Interact();
 
 	FTimerHandle TimerHandle_ReloadTime;
 
@@ -117,4 +121,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player")
 	WeaponTypeEnum GetCurrentWeaponType();
 
+	UFUNCTION(BlueprintCallable, Category = "Player")
+	ASBasicEnvironmetActor* GetObject() { return Object; };
+
+	UFUNCTION(BlueprintCallable, Category = "Player")
+	void SetObject(AActor* Reference);
 };

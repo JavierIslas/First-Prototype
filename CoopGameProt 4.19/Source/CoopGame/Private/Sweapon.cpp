@@ -57,6 +57,7 @@ void ASweapon::Fire()
 			FVector EyeLocation;
 			FRotator EyeRotation;
 			Owner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
+			FVector TraceStart = MeshComp->GetSocketLocation(SocketName);
 
 			//BulletSpread Calcualtion
 			FVector ShotDirection = EyeRotation.Vector();
@@ -76,7 +77,7 @@ void ASweapon::Fire()
 			EPhysicalSurface SurfaceType = SurfaceType_Default;
 
 			FHitResult Hit;
-			if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, COLLISION_WEAPON, QueryParams))
+			if (GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, COLLISION_WEAPON, QueryParams))
 			{
 				AActor* HitActor = Hit.GetActor();
 				SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());

@@ -64,12 +64,21 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Configuration")
 	bool bState;
 
+	UPROPERTY(EditAnywhere, Category = "Debuggin")
+	float ForceMagnitude;
+
 	FTimerHandle TimerHandel_SelfDamage;
 
 	FTimerHandle TimerHandel_Burning;
 
 	UFUNCTION()
 	void OnHealthChanged(USHealtComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+
+	UFUNCTION()
+	virtual void ActorBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult) override;
+
+	UFUNCTION()
+	virtual void ActorEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) override;
 
 public:
 
