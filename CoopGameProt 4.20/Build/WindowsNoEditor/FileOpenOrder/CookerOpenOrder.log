@@ -1,0 +1,733 @@
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Mesh/UE4_Mannequin_Skeleton.uasset" 0
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Aim_Space_Hip.uasset" 1
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Aim_Space_Ironsights.uasset" 2
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_to_Stand_Rifle_Hip.uasset" 3
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_to_Stand_Rifle_Ironsights.uasset" 4
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Death_Ironsights_1.uasset" 5
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Death_Ironsights_2.uasset" 6
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Equip_Rifle_Standing.uasset" 7
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Idle_Rifle_Hip.uasset" 8
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Fire_Rifle_Hip.uasset" 9
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Fire_Shotgun_Hip.uasset" 10
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Fire_Shotgun_Ironsights.uasset" 11
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Hit_React_4.uasset" 12
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jump_From_Stand_Ironsights.uasset" 13
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Death_1.uasset" 14
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Death_2.uasset" 15
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Fire_1.uasset" 16
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Fire_2.uasset" 17
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Idle.uasset" 18
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Reload_Rifle.uasset" 19
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_Reload_Shotgun.uasset" 20
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Prone_To_Stand.uasset" 21
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Reload_Pistol.uasset" 22
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Reload_Rifle_Ironsights.uasset" 23
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Reload_Shotgun_Hip.uasset" 24
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Reload_Shotgun_Ironsights.uasset" 25
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Fire_Rifle_Ironsights.uasset" 26
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Rifle_Shoting.uasset" 27
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Stand_to_Crouch_Rifle_Hip.uasset" 28
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Stand_to_Crouch_Rifle_Ironsights.uasset" 29
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Stand_To_Prone.uasset" 30
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonJump_End.uasset" 31
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPerson_Jump.uasset" 32
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonJump_Loop.uasset" 33
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonJump_Start.uasset" 34
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonIdle.uasset" 35
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonRun.uasset" 36
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPersonWalk.uasset" 37
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPerson_IdleRun_2D.uasset" 38
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 39
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/ThirdPerson_AnimBP.uasset" 40
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Center_Down_Space_Hip.uasset" 41
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Center_Space_Hip.uasset" 42
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Center_Up_Space_Hip.uasset" 43
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/HipAimOffsetBlendSpace1D.uasset" 44
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Idle_Rifle_Hip.uasset" 45
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Idle_Rifle_Ironsights.uasset" 46
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Death_1.uasset" 47
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Death_2.uasset" 48
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Death_3.uasset" 49
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Idle_Pistol.uasset" 50
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Idle_Rifle_Ironsights.uasset" 51
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jump_From_Jog.uasset" 52
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jump_From_Stand.uasset" 53
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Reload_Rifle_Hip.uasset" 54
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Sprint_Fwd_Rifle.uasset" 55
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Bwd_Rifle_Ironsights.uasset" 56
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Fwd_Rifle_Ironsights.uasset" 57
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Lt_Rifle_Ironsights.uasset" 58
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Rt_Rifle_Ironsights.uasset" 59
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/BS_AimCrouchWalk.uasset" 60
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Walk_Bwd_Rifle_Ironsights.uasset" 61
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Walk_Fwd_Rifle_Ironsights.uasset" 62
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Walk_Lt_Rifle_Ironsights.uasset" 63
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Walk_Rt_Rifle_Ironsights.uasset" 64
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/BS_AimJog.uasset" 65
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Bwd_Rifle_Hip.uasset" 66
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Fwd_Rifle_Hip.uasset" 67
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Lt_Rifle_Hip.uasset" 68
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Crouch_Walk_Rt_Rifle_Hip.uasset" 69
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/BS_CrouchWalk.uasset" 70
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jog_Bwd_Rifle.uasset" 71
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jog_Fwd_Rifle.uasset" 72
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jog_Lt_Rifle.uasset" 73
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Jog_Rt_Rifle.uasset" 74
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/BS_Jog.uasset" 75
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4ASP_HeroTPP_AnimBlueprint.uasset" 76
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 77
+"../../../Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_AO.uasset" 78
+"../../../Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_NormalBlend.uasset" 79
+"../../../Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_Simple.uasset" 80
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" 81
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" 82
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" 83
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" 84
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Textures/UE4_LOGO_CARD.uasset" 85
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/ML_Plastic_Shiny_Beige_LOGO.uasset" 86
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/T_ML_Aluminum01.uasset" 87
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset" 88
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset" 89
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Textures/UE4_Mannequin__normals.uasset" 90
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Textures/UE4_Mannequin_MAT_MASKA.uasset" 91
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Textures/UE4_Mannequin_occlusion_Mobile.uasset" 92
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/M_UE4Man_Body.uasset" 93
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Textures/UE4Man_Logo_N.uasset" 94
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/M_UE4Man_ChestLogo.uasset" 95
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Core/PhysMat_FleshDefault.uasset" 96
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Core/PhysMat_FleshVulnerable.uasset" 97
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Mesh/SK_Mannequin_PhysicsAsset.uasset" 98
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Mesh/SK_Mannequin.uasset" 99
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Ue4ASP_Character.uasset" 100
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Left_Center_Space_Hip.uasset" 101
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Left_Down_Space_Hip.uasset" 102
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Left_Up_Space_Hip.uasset" 103
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Right_Center_Space_Hip.uasset" 104
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Right_Down_Space_Hip.uasset" 105
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Aim_Right_Up_Space_Hip.uasset" 106
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AimFrames/Iron/Aim_Space_Ironsights.uasset" 107
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/EQS_TestingPawn_BP.uasset" 108
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/TargetDummy_BP.uasset" 109
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Geometry/Meshes/CubeMaterial.uasset" 110
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Geometry/Meshes/1M_Cube.uasset" 111
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 112
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Geometry/Meshes/TemplateFloor.uasset" 113
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/BoxExample.uasset" 114
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/InGameMenu_WBP.uasset" 115
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/Cruz.uasset" 116
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/ServerRow_WBP.uasset" 117
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/T_HealthMask.uasset" 118
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/MainMenu_WBP.uasset" 119
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Material.uasset" 120
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Pickup_ammo.uasset" 121
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Pickup_powerup.uasset" 122
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Pickup_weapon.uasset" 123
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/powerdown_01.uasset" 124
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/powerdown_02.uasset" 125
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/powerup_loop_01.uasset" 126
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/powerup_loop_02.uasset" 127
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/respawn_01.uasset" 128
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/T_CircleMask.uasset" 129
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/T_CircleMask2.uasset" 130
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/T_Flame_Tile.uasset" 131
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/T_MeshFire_Mask.uasset" 132
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/gold_ore_effect.uasset" 133
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/sunflare.uasset" 134
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/m_flare_03.uasset" 135
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/clouds_dust_detail_01.uasset" 136
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/M_wind_swirl_02.uasset" 137
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/S_SandSwirl.uasset" 138
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/P_gold_ore_appearance.uasset" 139
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/T_Fire_tile.uasset" 140
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/gold_ore_circle2.uasset" 141
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/M_Volumetric_Streaks.uasset" 142
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/M_single_ray_01.uasset" 143
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/P_gold_ore_aura.uasset" 144
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/P_gold_ore_lost.uasset" 145
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 146
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 147
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 148
+"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 149
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/round_mask.uasset" 150
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/T_Smoke2_Tile.uasset" 151
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/Coin2.uasset" 152
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Powerups/Effects/SM_plane_pivot_down.uasset" 153
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/Effects/P_gold_ore_received.uasset" 154
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Basic_Wall.uasset" 155
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Pillar_50x500.uasset" 156
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_400x300.uasset" 157
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_400x400.uasset" 158
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" 159
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Collapse01.uasset" 160
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Collapse02.uasset" 161
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Explosion01.uasset" 162
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Explosion02.uasset" 163
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Fire01.uasset" 164
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Fire_Sparks01.uasset" 165
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Light01.uasset" 166
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Light01_Cue.uasset" 167
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Light02.uasset" 168
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Light02_Cue.uasset" 169
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Smoke01.uasset" 170
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Birds01.uasset" 171
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Music01.uasset" 172
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Wind05.uasset" 173
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Wind06.uasset" 174
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Steam01.uasset" 175
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Explosion_Cue.uasset" 176
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Burst_M.uasset" 177
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Burst.uasset" 178
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 179
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" 180
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/m_flare_01.uasset" 181
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 182
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" 183
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 184
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 185
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" 186
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Explosion.uasset" 187
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" 188
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 189
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 190
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Bush_D.uasset" 191
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Bush_N.uasset" 192
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Bush.uasset" 193
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Bush.uasset" 194
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Chair_M.uasset" 195
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Chair_N.uasset" 196
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Chair.uasset" 197
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Couch.uasset" 198
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Glass.uasset" 199
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Door_M.uasset" 200
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Door_N.uasset" 201
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Door.uasset" 202
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Door.uasset" 203
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" 204
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" 205
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" 206
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 207
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 208
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_RockMesh_M.uasset" 209
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_RockMesh_N.uasset" 210
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Rock.uasset" 211
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Rock.uasset" 212
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Shelf_M.uasset" 213
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Shelf_N.uasset" 214
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Shelf.uasset" 215
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Shelf.uasset" 216
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Basic_Floor.uasset" 217
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Stairs.uasset" 218
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Cone.uasset" 219
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 220
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Pipe.uasset" 221
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 222
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 223
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Plane.uasset" 224
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Torus.uasset" 225
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Trim.uasset" 226
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 227
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 228
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 229
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Tube.uasset" 230
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 231
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 232
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 233
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/ball_roll_01g.uasset" 234
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/ball_roll_02_loop.uasset" 235
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/ball_roll_03_loop.uasset" 236
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/DroneTracker_idle.uasset" 237
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/DroneTracker_spotted.uasset" 238
+"../../../Engine/Content/EngineDebugMaterials/VertexColorViewMode_RedOnly.uasset" 239
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 240
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 241
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" 242
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Water_N.uasset" 243
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" 244
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" 245
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Fire.uasset" 246
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 247
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/ExplosiveBarrel_BP.uasset" 248
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/Label.uasset" 249
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/ShellEject/M_ShellEjectMetal.uasset" 250
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/ShellEject/SM_ShellEject.uasset" 251
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/ShellEject/P_Rifle_ShellEject.uasset" 252
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MagGun_01_N.uasset" 253
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/M_Weapon01.uasset" 254
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MI_Launcher01.uasset" 255
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MI_Launcher02.uasset" 256
+"../../../Engine/Content/ArtTools/RenderToTexture/Meshes/S_1_Unit_Plane.uasset" 257
+"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 258
+"../../../Engine/Content/BasicShapes/Cone.uasset" 259
+"../../../Engine/Content/BasicShapes/Cylinder.uasset" 260
+"../../../Engine/Content/BasicShapes/Plane.uasset" 261
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 262
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 263
+"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 264
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 265
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 266
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 267
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 268
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 269
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 270
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 271
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 272
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 273
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 274
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 275
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 276
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 277
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 278
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 279
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 280
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 281
+"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 282
+"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 283
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 284
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 285
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 286
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 287
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 288
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 289
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 290
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 291
+"../../../Engine/Content/EditorResources/S_Actor.uasset" 292
+"../../../Engine/Content/EditorResources/S_Trigger.uasset" 293
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 294
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 295
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 296
+"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 297
+"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 298
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 299
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 300
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 301
+"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 302
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 303
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 304
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 305
+"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 306
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 307
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 308
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 309
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 310
+"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 311
+"../../../Engine/Content/EngineDebugMaterials/M_SimpleTranslucent.uasset" 312
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 313
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 314
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 315
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 316
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 317
+"../../../Engine/Content/EngineFonts/Roboto.uasset" 318
+"../../../Engine/Content/EngineFonts/Faces/RobotoTiny.uasset" 319
+"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 320
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset" 321
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset" 322
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset" 323
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset" 324
+"../../../Engine/Content/EngineMaterials/BaseFlattenMaterial.uasset" 325
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 326
+"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 327
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 328
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 329
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 330
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 331
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 332
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 333
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 334
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 335
+"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 336
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 337
+"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 338
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 339
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 340
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 341
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 342
+"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 343
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 344
+"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 345
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 346
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 347
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 348
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 349
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 350
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 351
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 352
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 353
+"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 354
+"../../../Engine/Content/EngineMeshes/Sphere.uasset" 355
+"../../../Engine/Content/EngineResources/Black.uasset" 356
+"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 357
+"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 358
+"../../../Engine/Content/EngineResources/DefaultVolumeTexture2D.uasset" 359
+"../../../Engine/Content/EngineResources/DefaultVolumeTexture.uasset" 360
+"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 361
+"../../../Engine/Content/EngineSounds/Master.uasset" 362
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 363
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 364
+"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 365
+"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 366
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 367
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 368
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 369
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 370
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 371
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 372
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 373
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 374
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 375
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 376
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 377
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 378
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 379
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 380
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 381
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 382
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 383
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 384
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 385
+"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 386
+"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 387
+"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 388
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 389
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 390
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 391
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 392
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 393
+"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 394
+"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 395
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 396
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 397
+"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 398
+"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 399
+"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 400
+"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 401
+"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 402
+"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 403
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/PokeAHoleMaterial.uasset" 404
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_AO.uasset" 405
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Color.uasset" 406
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Normal.uasset" 407
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/GearVRControllerMaterial.uasset" 408
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/GearVrController.uasset" 409
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/touchController_albedo.uasset" 410
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/touchController_controlmap.uasset" 411
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/touchController_mat.uasset" 412
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/LeftTouchController.uasset" 413
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/RiftHMD.uasset" 414
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/RightTouchController.uasset" 415
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 416
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 417
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 418
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 419
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 420
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 421
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 422
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 423
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 424
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/T_CircleMask3.uasset" 425
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/PowerUpICO_M.uasset" 426
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/PickUp_SpawnPoint_BP.uasset" 427
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/Sine_Remapped.uasset" 428
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/PowerUp_LightFuntion_M.uasset" 429
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/PowerUp_Base_BP.uasset" 430
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/PowerUp_M.uasset" 431
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/PowerUp_MI.uasset" 432
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/HealthIcon.uasset" 433
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/PowerUp_Item_HealthRegen_BP.uasset" 434
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/PowerUps/SpeedIcon.uasset" 435
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/PowerUp_Item_SuperSpeed_BP.uasset" 436
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/GameState_BP.uasset" 437
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BasicTracer/Beam.uasset" 438
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BasicTracer/M_Beam.uasset" 439
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BasicTracer/P_SmokeTrail.uasset" 440
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/clouds_dust_detail_01.uasset" 441
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/M_blood_cloud_01.uasset" 442
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/T_BloodSplatter_Frames01.uasset" 443
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/M_blood_splash_01.uasset" 444
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/T_BloodSplat_03_SubUV.uasset" 445
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/M_blood_splash_03.uasset" 446
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/BloodImpact/P_blood_splash_02.uasset" 447
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/GenericImpact/Flare_02.uasset" 448
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/GenericImpact/M_LensFlare_02.uasset" 449
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/GenericImpact/T_SparkCore_2X2.uasset" 450
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/GenericImpact/M_spark_subUV.uasset" 451
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/GenericImpact/P_RifleImpact.uasset" 452
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/MuzzleSmokeOne_1024_11x11.uasset" 453
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/MuzzleFlash_Master.uasset" 454
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/MuzzleFlash_Master_Inst.uasset" 455
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/MuzzleTwo_2048_6x6.uasset" 456
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/MuzzleFlash_Master_Inst_2.uasset" 457
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Muzzle/P_Muzzle_Large.uasset" 458
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/Crosshairs/T_Crosshair_Horizontal_M.uasset" 459
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/Crosshairs/T_Crosshair_Scanline_M.uasset" 460
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/Crosshairs/M_Crosshairs_MultiHolo_Scanline.uasset" 461
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MI_Rifle01.uasset" 462
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MagGun_02_N.uasset" 463
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/MI_Rifle02.uasset" 464
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/SK_Rifle_Skeleton.uasset" 465
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Weapons/SK_Rifle.uasset" 466
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/Pistol_BP.uasset" 467
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/CamShake_RifleFire_BP.uasset" 468
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/Rifle_BP.uasset" 469
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/Crosshair.uasset" 470
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/M_HealthIndicator.uasset" 471
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/HealthIndicatorZone.uasset" 472
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/PlayerCharacter_BP.uasset" 473
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/ball_roll_04_loop.uasset" 474
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/ball_roll_04_loop_Cue.uasset" 475
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/Explosion01.uasset" 476
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/TrackerBotAttenuation.uasset" 477
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/DestructionCue.uasset" 478
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/DroneTracker_explodewarning.uasset" 479
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/SelfDestructCue.uasset" 480
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/TrackerBot_M.uasset" 481
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/TrackerBot/TrackerBot_SM.uasset" 482
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/T_Burst_M.uasset" 483
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/M_Burst.uasset" 484
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/T_Explosion_SubUV.uasset" 485
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/M_explosion_subUV.uasset" 486
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/m_flare_01.uasset" 487
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/M_radial_ramp.uasset" 488
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/T_Smoke_SubUV.uasset" 489
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/T_Smoke_Tiled_D.uasset" 490
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/M_smoke_subUV.uasset" 491
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/WeaponEffects/Explosion/P_Explosion.uasset" 492
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/TrackerBot_BP.uasset" 493
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/AIUE4ASP_HeroTPP_AnimBlueprint.uasset" 494
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/AdvanceAI_BB.uasset" 495
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/AttackTarget_Task_BP.uasset" 496
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/Decorator_DistanTo_BP.uasset" 497
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/SelectTargetActor_Service_BP.uasset" 498
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/TargetActor_EQS.uasset" 499
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/FindMoveTo_EQS.uasset" 500
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/FindNearestPlayer_EQS.uasset" 501
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/AdvanceAI_BT.uasset" 502
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/EnemyRifle_BP.uasset" 503
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/M_UE4Man_Body_Inst.uasset" 504
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/UE4_Mannequin/Materials/M_UE4Man_ChestLogo_Inst.uasset" 505
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/HumanoidEnemy/Enemy_Base_BP.uasset" 506
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/EnvQueryCcntext_BotSpawns.uasset" 507
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/EnvQueryCOntext_AllPlayers.uasset" 508
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/EQS_FindSpawnLocarion.uasset" 509
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/STestGameMode_BP.uasset" 510
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Blockout_P_BuiltData.uasset" 511
+"../../../Engine/Content/BasicShapes/Cube.uasset" 512
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Blockout_P.umap" 513
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Level_BuiltData.uasset" 514
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 515
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Floor_400x400.uasset" 516
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_500x500.uasset" 517
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" 518
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Level.umap" 519
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/BluePrints/TestMapMode_BP.uasset" 520
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Test_BuiltData.uasset" 521
+"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 522
+"../../../Engine/Content/MapTemplates/SM_Template_Map_Floor.uasset" 523
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Test.umap" 524
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/UI/Loading_WBP.uasset" 525
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/Maps/Transition.umap" 526
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Equip_Pistol_Standing.uasset" 527
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Hit_React_1.uasset" 528
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Hit_React_2.uasset" 529
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Hit_React_3.uasset" 530
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Idle_Rifle_Hip_Break1.uasset" 531
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Idle_Rifle_Hip_Break2.uasset" 532
+"../../../Engine/Content/TemplateResources/M_Template_Master.uasset" 533
+"../../../Engine/Content/TemplateResources/MI_Template_BaseGray_03_Metal.uasset" 534
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/AnimStarterPack/Showcase.umap" 535
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/MenuSystem/MainMenu.umap" 536
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 537
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 538
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 539
+"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 540
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 541
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 542
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 543
+"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 544
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 545
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 546
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" 547
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/BP_LightStudio.uasset" 548
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" 549
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_AssetPlatform.uasset" 550
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 551
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 552
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 553
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/Color_checker.uasset" 554
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 555
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 556
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 557
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" 558
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/Advanced_Lighting.umap" 559
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" 560
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_MacroVariation.uasset" 561
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 562
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 563
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 564
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 565
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 566
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Copper.uasset" 567
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Statue_M.uasset" 568
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Statue_N.uasset" 569
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" 570
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Background_Cue.uasset" 571
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Chair.uasset" 572
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Statue.uasset" 573
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Statue.uasset" 574
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_TableRound_M.uasset" 575
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_TableRound_N.uasset" 576
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_TableRound.uasset" 577
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_TableRound.uasset" 578
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/Minimal_Default.umap" 579
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Fire01_Cue.uasset" 580
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 581
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Smoke01_Cue.uasset" 582
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Smoke.uasset" 583
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" 584
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" 585
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Spark_Core.uasset" 586
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Spark.uasset" 587
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Sparks.uasset" 588
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" 589
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Steam01_Cue.uasset" 590
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Steam_Lit.uasset" 591
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" 592
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Lamp_M.uasset" 593
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Lamp_N.uasset" 594
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Lamp.uasset" 595
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" 596
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" 597
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_Lamp_Wall.uasset" 598
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" 599
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" 600
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Procedurals/ComputeFilterWidth.uasset" 601
+"../../../Engine/Content/EngineMaterials/AntiAliasedTextMaterialTranslucent.uasset" 602
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 603
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 604
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 605
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 606
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 607
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 608
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 609
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 610
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 611
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 612
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 613
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 614
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 615
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 616
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 617
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 618
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 619
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 620
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 621
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 622
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 623
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 624
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 625
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 626
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 627
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 628
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 629
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 630
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 631
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Gradinet_01.uasset" 632
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 633
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 634
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 635
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 636
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 637
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 638
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 639
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 640
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 641
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 642
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 643
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 644
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 645
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 646
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 647
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 648
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 649
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 650
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 651
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 652
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 653
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 654
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Ground_Grass.uasset" 655
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 656
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 657
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 658
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 659
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 660
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Ground_Moss.uasset" 661
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 662
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 663
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Gold.uasset" 664
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 665
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Rust.uasset" 666
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 667
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 668
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Metal_Steel.uasset" 669
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 670
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 671
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 672
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 673
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 674
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 675
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 676
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 677
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Rock_Slate.uasset" 678
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 679
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 680
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 681
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 682
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 683
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 684
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 685
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 686
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 687
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 688
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 689
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Tech_Panel.uasset" 690
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Water_Lake.uasset" 691
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Water_M.uasset" 692
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Water_Ocean.uasset" 693
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 694
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 695
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 696
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 697
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 698
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 699
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 700
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 701
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Wood_Oak.uasset" 702
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 703
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 704
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Wood_Pine.uasset" 705
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 706
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 707
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 708
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_400x200.uasset" 709
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" 710
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" 711
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Collapse_Cue.uasset" 712
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Audio/Starter_Music_Cue.uasset" 713
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 714
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" 715
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Particles/P_Ambient_Dust.uasset" 716
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/MaterialSphere.uasset" 717
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Frame_M.uasset" 718
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Textures/T_Frame_N.uasset" 719
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/Materials/M_Frame.uasset" 720
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_CornerFrame.uasset" 721
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_DoorFrame.uasset" 722
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_GlassWindow.uasset" 723
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_PillarFrame.uasset" 724
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_PillarFrame300.uasset" 725
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Props/SM_WindowFrame.uasset" 726
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Cube.uasset" 727
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 728
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Shapes/Shape_Sphere.uasset" 729
+"../../../../UnrealProjects/project/SteamAPI/CoopGameProt 4.20/Content/StarterContent/Maps/StarterMap.umap" 730
+"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 731
+"../../../Engine/Content/Maps/Entry.umap" 732
